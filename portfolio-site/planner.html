@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner — Iyanuoluwa Micheal Lamina</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"></span>
+        Iyanuoluwa Micheal Lamina
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Academic Planner</h1>
+        <p>Add, complete, and delete tasks. Everything here is powered by JavaScript.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+
+        <!-- Form for adding a new task. JavaScript intercepts the
+             submit event so the page never actually reloads. -->
+        <form id="task-form" class="planner-form">
+          <label class="visually-hidden" for="task-input">Task description</label>
+          <input
+            type="text"
+            id="task-input"
+            name="task"
+            placeholder="e.g. Finish COS 106 term project"
+            required
+          >
+
+          <label class="visually-hidden" for="task-due-input">Due date</label>
+          <input
+            type="date"
+            id="task-due-input"
+            name="due"
+          >
+
+          <button type="submit" class="btn">Add Task</button>
+        </form>
+
+        <!-- Tasks are rendered into this list by js/script.js -->
+        <ul id="task-list"></ul>
+
+        <!-- Shown by JavaScript only when the task list is empty -->
+        <p id="planner-empty" class="planner-empty">No tasks yet — add your first one above.</p>
+
+        <!-- Live summary, updated by JavaScript every time the list changes -->
+        <div class="planner-stats">
+          <span>Total tasks: <strong id="stat-total">0</strong></span>
+          <span>Completed: <strong id="stat-done">0</strong></span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Iyanuoluwa Micheal Lamina. Built for COS 106 — Introduction to Web Technologies.</p>
+      <p><a href="contact.html">i.lamina7148@miva.edu.ng</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
